@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Quiz</title>
+    <link rel="stylesheet" href="./assets/style.css">
+</head>
+
+<body>
+    <header>
+        <h2>Time Left <span id="time-left"></span></h2>
+    </header>
+    <main>
+        <!-- start screen -->
+        <div id="start-screen">
+            <h1>Play the game!
+                <button id="start-game-btn">Start Game</button>
+            </h1>
+        </div>
+        <!-- div for the quiz content -->
+        <div id="quiz-content">
+            <h2>Quiz questions will be here</h2>
+        </div>
+        <!-- div for post-game info -->
+        <div id="post-game-screen" class="hide">
+            <h2>Post Game screen</h2>
+            <p>Your Score:<span id="user-score"></span></p>
+            <button id="play-again-btn">Play again</button>
+        </div>
+    </main>
+    <script src="assets/js/questions.js"></script>
+    <script src="assets/js/script.js"></script>
+</body>
+
+</html>
