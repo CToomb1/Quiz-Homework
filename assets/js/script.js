@@ -5,71 +5,77 @@ var quizContentEl = document.querySelector("#quiz-content");
 var postGameEl = document.querySelector("#post-game-screen");
 var userScoreEl = document.querySelector("#user-score");
 var playAgainBtnEl = document.querySelector("#play-again-btn");
-// time-left
-// start game button
-// start screen
+var timerIntervalId = 0;
+var score = 0;
+var secondsLeft = 0;
+startGame();
 
-// quiz content (event delegation. event listener attach to this)
+function startGame() {
+    var secondsLeft = 300;
 
-// post-game screen
-// user-score
-// play again-btn
+    timeLeftEl.textContent = secondsLeft;
 
-// create variables for game logic
-  // timerIntervalId
-  // score
-  // secondsLeft
+    userScoreEl.value = userScoreEl.defaultValue;
 
-// create function to start game
-  // set seconds left variable to starting time (300 seconds = 5 minutes)
-  // write seconds left to the page
+};
 
-  // reset score to 0
-  // write score to the page (optional)
+startGameBtnEl.addEventListener("click", function(event) {
+    var element = event.target;
+  
+    if (element.matches("button") === true) {
+    startScreenEl.setAttribute("class", "hide");
+    
+    quizContentEl.getAttribute("class");
+  }
+  
+     displayQuestions(0);
+  });
 
-  // hide start-screen element && post-game-screen
-  // show quiz-content element
-
-  // display first question
-  displayQuestion(0);
-
-  // set timer interval to setInterval function that decrements secondsLeft every second
-  timerIntervalId = setInterval(function() {
+  var timerIntervalId = setInterval(function() {
     secondsLeft--;
-    if (secondsLeft <= 0) {
+    if (secondsLeft === 0) {
+      clearInterval(timeInterval);
       stopGame()
     }
   }, 1000);
-// create function to display a question and possible choices
-function displayQuestions(questionIndex) {
-  // check if questionIndex in questions array doesn't exist
+
+function displayQuestions() {
+  var questionsArr = Math.floor(Math.random() * questions.length);
+  var questionIndex = questionsArr.length;
+
   if (!questions[questionIndex]) {
-    // stop game weve hit the last question
+
     return stopGame();
-  }
-  // get questions[questionIndex]
-  // print question to the page
-  // use data attribute to know which index the question is
-  // loop through choices and print out choices to the page (make them buttons)
-}
+  };
+
+quizContentEl.textContent = questions[questionIndex];
+};
+quizContentEl.getAttribute(questions[questionIndex]);
+quizContentEl.append(questions[questionIndex]);
+quizContentEl.setAttribute("data-index", [questionIndex]);
+
+for (var i = 0; i > questions.length; i++)
 
 // create function to handle user's answering
-  // use event delegation to make sure button was clicked
-  // read data attribute of what question we answered (index)
-  // check to see if choice picked is same as questions correct answer
-  // if yes, increase score++
-  // if no, subract time from secondsLeft
+// use event delegation to make sure button was clicked
+// read data attribute of what question we answered (index)
+// check to see if choice picked is same as questions correct answer
+// if yes, increase score++
+// if no, subract time from secondsLeft
 
-  // get index of next question (this questions index +1)
-  // run displayQuestion(nextQuestionIndex)
+// get index of next question (this questions index +1)
+// run displayQuestion(nextQuestionIndex)
 
 // create a function to stop the game (answering all the questions or time has run out)
-  // clearInterval() to stop the timer
-  // hide quiz-content element
-  // show post-game-screen
-  // print out user score
+// clearInterval() to stop the timer
+// hide quiz-content element
+// show post-game-screen
+// print out user score
 
-// add event listeners
-  // start game button (for starting the game)
-  // quiz content (event delegation) - answering a question in the game
-  // play again button
+startGameBtnEl.addEventListener("click", startGame);
+
+quizContentEl.addEventListener("click", function(event) {
+  event.preventDefault();
+});
+
+playAgainBtnEl.addEventListener("click", playAgain);
