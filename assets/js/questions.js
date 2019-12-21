@@ -12,7 +12,7 @@ var questions = [
     {
         questions: "What does CSS stand for?",
         choices: ["Cascading Style Sheet", "Coded Style Sheet", "Creative Style Screen", "Alex Rosenkranz"],
-        answer: "Cascading Style Sheetr"
+        answer: "Cascading Style Sheet"
     },
     {
         questions: "What does Boolean represent?",
@@ -26,7 +26,7 @@ var questions = [
     },
     {
         questions: "Which is NOT a JavaScript data type?",
-        choices: ["Boolean", "String", "Object", "API"],
+        choices: ["String", "API", "Object", "Boolean"],
         answer: "API"
     },
     {
@@ -40,9 +40,9 @@ var questions = [
         answer: ".js"
     },
     {
-        questions: "True or False: == is the same as ===",
-        choices: ["True", "False"],
-        answer: "False"
+        questions: "What is a computer",
+        choices: ["Verb", "Noun", "God", "Food"]
+        answer: "Noun"
     },
     {
         questions: "What is the difference in meaning between $ and document.jqueryselecter()?",
