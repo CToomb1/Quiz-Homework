@@ -25,11 +25,6 @@ var questions = [
         answer: "A variable that can hold more than one value at a time"
     },
     {
-        questions: "Which is NOT a JavaScript data type?",
-        choices: ["String", "API", "Object", "Boolean"],
-        answer: "API"
-    },
-    {
         questions: "What HTML tag do you use for Javascript?",
         choices: ["<src>", "<script>", "<img>", "<p>"],
         answer: "<script>"
@@ -43,11 +38,6 @@ var questions = [
         questions: "What is a computer",
         choices: ["Verb", "Noun", "God", "Food"],
         answer: "Noun"
-    },
-    {
-        questions: "What is the difference in meaning between $ and document.jqueryselecter()?",
-        choices: ["They aren't used in coding", "One is undefined in coding", "One adds 5", "They mean the same"],
-        answer: "They mean the same"
     },
     {
         questions: "What method in bash can be used to save a code for a website from VS Code to github?",

@@ -5,3 +5,4 @@ Creating the questions was an interesting part to the project, trying not to mak
 I used google for a few different aspects of the project such as setting the timer
 I also referred back to class videos when I got stuck as well as received help from fellow classmates
 This project was definitely difficult, but I learned a lot from it and look forward to projects of this nature in the future
+I was unsuccessful (repeatedly) making the timer and play again button active and working or even appearing at all
