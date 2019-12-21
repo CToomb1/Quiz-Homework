@@ -16,7 +16,6 @@ var answer2BtnEl;
 var answer3BtnEl;
 var answer4BtnEl;
 
-
 function startGame() {
   var secondsLeft = 120;
   timeLeftEl.textContent = secondsLeft;
@@ -30,7 +29,6 @@ function startGame() {
       stopGame();
     }
   }, 1000);
-
 
   displayQuestions(0);
 }
@@ -79,12 +77,12 @@ startGameBtnEl.addEventListener("click", function (event) {
   }
 });
 
-
 startGameBtnEl.addEventListener("click", startGame);
 
 quizContentEl.addEventListener("click", function (event) {
   event.preventDefault();
 });
 
+function playAgain() { }
 
 playAgainBtnEl.addEventListener("click", playAgain);
