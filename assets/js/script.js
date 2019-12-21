@@ -18,7 +18,7 @@ var answer4BtnEl;
 
 
 function startGame() {
-  var secondsLeft = 300;
+  var secondsLeft = 120;
   timeLeftEl.textContent = secondsLeft;
 
   userScoreEl.value = userScoreEl.defaultValue;
@@ -61,7 +61,7 @@ function questionClick() {
   if (this.value !== questions[currentQuestionIndex].answer) {
     alert("Nope! Wrong Answer");
   } else {
-    alert("Your Right! Way to Go!");
+    alert("You're Right! Way to Go!");
   }
   currentQuestionIndex++;
   displayQuestions(currentQuestionIndex);

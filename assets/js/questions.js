@@ -41,7 +41,7 @@ var questions = [
     },
     {
         questions: "What is a computer",
-        choices: ["Verb", "Noun", "God", "Food"]
+        choices: ["Verb", "Noun", "God", "Food"],
         answer: "Noun"
     },
     {
